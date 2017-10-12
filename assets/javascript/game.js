@@ -8,11 +8,6 @@ $(document).ready(function()
     var wins = 0;
     var losses = 0;
 
-    // var goalElement = document.getElementById("target");
-    // var scoreElement = document.getElementById("score");
-    // var winsElement = document.getElementById("wins");
-    // var lossesElement = document.getElementById("losses");
-
     function RandomNum(min, max) 
     {
         return Math.floor(Math.random() * (max - min) ) + min;
@@ -26,11 +21,9 @@ $(document).ready(function()
             RandomArray.push(RandomNum(1, 12));
         }
         score = 0;
-        // scoreElement.innerHTML = score;
-        $("#score").text(score)
-        goal = RandomNum(19, 120);
-        // goalElement.innerHTML = goal;    
-        $("#goal").text(goal);        
+        $("#score").text("Score: " + score);
+        goal = RandomNum(19, 120);   
+        $("#goal").text("Goal: " + goal);        
         console.log(RandomArray);
     }
 
@@ -39,9 +32,8 @@ $(document).ready(function()
         current = RandomArray[this.id];
         current = parseInt(current);
         score += current;
-        // scoreElement.innerHTML = score;
 
-        $("#score").text(score);
+        $("#score").text("Score: " + score);
         checkWin();
         console.log(current, score, goal);
     });
@@ -52,15 +44,13 @@ $(document).ready(function()
         {
             alert("You Win!");
             wins++;
-            // winsElement.innerHTML = wins;
-            $("#wins").text(wins);
+            $("#wins").text("Wins: " + wins);
             startgame();
         } else if ( score > goal) 
         {
             alert("You Lose!");
             losses++;
-            // lossesElement.innerHTML = losses;
-            $("#losses").text(losses);
+            $("#losses").text("Losses: " + losses);
             startgame();
         }
     }
@@ -68,6 +58,3 @@ $(document).ready(function()
     startgame();
 
 });
-
-// Notes: jquery add/remove class:  $("a").addClass("test");  .removeClass  Element is a, class is test.
-// 

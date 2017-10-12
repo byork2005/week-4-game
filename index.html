@@ -6,110 +6,74 @@
     <title>Gem Collector!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 </head>
 <body>
-    <h1 class="gem" id="0">Diamond</h1>
-    <h1 class="gem" id="1">Ruby</h1>
-    <h1 class="gem" id="2">Emerald</h1>
-    <h1 class="gem" id="3">Sapphire</h1>
 
-    <br>
+    <div class="wrapper">
 
-    <h2>Goal</h2>
+        <div class="row">
+            <header class="col-md-auto text">Gem Collector!</header>
+        </div>
 
-    <div id="goal">0</div>
+        <div class="row">
+            <div class="col-md-auto text">Click the gems to add to your score. Try to match the goal. Every game will have a new goal and gem values. Good Luck!</div>
+        </div>
 
-    <br>
+        <div class="row">
+            <div class="text">
+                <div class="col-md-2 col-md-offset-3 text" id="goal">Goal: #</div>
+                <div class="col-md-2 col-md-offset-2 text" id="score">Score: 0</div>
+            </div>
+            
+        </div>
 
-    <h2>Score</h2>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 imagebox">
+                <img src="assets/images/diamond.png" alt="Diamond" class="gem" id="0">
+                <img src="assets/images/ruby.png" alt="Ruby" class="gem" id="1">
+            </div>
+            <div class="col-md-6 col-md-offset-3 imagebox">
+                <img src="assets/images/emerald.png" alt="Emerald" class="gem" id="2">
+                <img src="assets/images/sapphire.png" alt="Sapphire" class="gem" id="3">
+            </div>
+        </div>
 
-    <div id="score">0</div>
+        <div class="row">
+            <div class="text winloss">
+                <div class="col-md-2 col-md-offset-4 text" id="wins">Wins: 0</div>
+                <div class="col-md-2 text" id="losses">Losses: 0</div>
+            </div>
+        </div>
+        
+        
 
-    <br>
 
-    <h2>Wins</h2>
+        <!-- <br>
 
-    <div id="wins">0</div>
+        <h2>Goal</h2>
 
-    <h2>Losses</h2>
+        <div id="goal">0</div>
 
-    <div id="losses">0</div>
+        <br>
 
-    <!-- <script>
+        <h2>Score</h2>
 
-        $(document).ready(function() {
+        <div id="score">0</div>
 
-            var score;
-            var goal;
-            var current;
-            var RandomArray = [];
-            var wins = 0;
-            var losses = 0;
+        <br>
 
-            // var goalElement = document.getElementById("target");
-            // var scoreElement = document.getElementById("score");
-            // var winsElement = document.getElementById("wins");
-            // var lossesElement = document.getElementById("losses");
+        <h2>Wins</h2>
 
-            function RandomNum(min, max) 
-            {
-                return Math.floor(Math.random() * (max - min) ) + min;
-            }
+        <div id="wins">0</div>
 
-            function startgame() 
-            {
-                RandomArray = [];
-                for (var i = 0; i < 4; i++) 
-                {
-                    RandomArray.push(RandomNum(1, 12));
-                }
-                score = 0;
-                // scoreElement.innerHTML = score;
-                $("#score").text(score)
-                goal = RandomNum(19, 120);
-                // goalElement.innerHTML = goal;    
-                $("#goal").text(goal);        
-                console.log(RandomArray);
-            }
+        <h2>Losses</h2>
 
-            $(".gem").click(function(event) 
-            {
-                current = RandomArray[this.id];
-                current = parseInt(current);
-                score += current;
-                // scoreElement.innerHTML = score;
+        <div id="losses">0</div> -->
 
-                $("#score").text(score);
-                checkWin();
-                console.log(current, score, goal);
-            });
-
-            function checkWin() 
-            {
-                if (score == goal) 
-                {
-                    alert("You Win!");
-                    wins++;
-                    // winsElement.innerHTML = wins;
-                    $("#wins").text(wins);
-                    startgame();
-                } else if ( score > goal) 
-                {
-                    alert("You Lose!");
-                    losses++;
-                    // lossesElement.innerHTML = losses;
-                    $("#losses").text(losses);
-                    startgame();
-                }
-            }
-
-            startgame();
-
-        }); 
-
-    </script> -->
+    </div> <!-- wrapper -->
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>

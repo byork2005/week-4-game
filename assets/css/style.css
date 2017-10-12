@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+}
+
+.body {
+    background-image: url("../images/background.png");
+    
+}
+
+.text {
+    font-family: 'Courgette', cursive;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+header.text {
+    font-size: 40px;
+}
+
+.gem {
+    max-width: 274px;
+    
+}
+
+.imagebox {
+    float: none;
+}
+
+.gem, .text, .imagebox {
+    border: 2px solid black;
+}
+
+.winloss {
+    margin-top: 20px;
+}
