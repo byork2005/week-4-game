@@ -3,8 +3,8 @@ html {
 }
 
 .body {
-    background-image: url("../images/background.png");
-    
+    background-image: url("../images/background.png"); 
+    width: 100%;
 }
 
 .text {
@@ -26,17 +26,27 @@ header.text {
 
 .gem {
     max-width: 274px;
-    
+    padding: 0 20;
+    width: 100%; 
 }
 
 .imagebox {
-    float: none;
+    margin-bottom: 15px;
 }
 
-.gem, .text, .imagebox {
-    border: 2px solid black;
-}
 
 .winloss {
     margin-top: 20px;
+}
+
+#instructions {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+    .imagebox {
+        max-width: 275px;
+        margin: 15px auto;
+    }
 }
